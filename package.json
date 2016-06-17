@@ -1,21 +1,21 @@
 {
-  "name": "aurelia-json",
+  "name": "aurelia-notification",
   "version": "0.2.0",
-  "description": "A JSON plugin for Aurelia based projects.",
+  "description": "A browser notification plugin for Aurelia based projects.",
   "keywords": [
     "aurelia",
     "plugin",
-    "json"
+    "notification"
   ],
   "author": "Giovanni Lovato <heruan@aldu.net>",
   "license": "CC0-1.0",
-  "homepage": "https://github.com/heruan/aurelia-json",
+  "homepage": "https://github.com/heruan/aurelia-notification",
   "bugs": {
-    "url": "https://github.com/heruan/aurelia-json/issues"
+    "url": "https://github.com/heruan/aurelia-notification/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heruan/aurelia-json.git"
+    "url": "https://github.com/heruan/aurelia-notification.git"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
