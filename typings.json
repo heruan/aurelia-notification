@@ -1,7 +1,0 @@
-{
-  "name": "aurelia-notification",
-  "homepage": "https://github.com/heruan/aurelia-notification",
-  "version": "0.1.0",
-  "main": "dist/es2015/index.d.ts",
-  "dependencies": {}
-}

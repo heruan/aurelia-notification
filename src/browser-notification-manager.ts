@@ -6,9 +6,9 @@ export class BrowserNotificationManager {
 
     private static DEFAULT: string = "default";
 
-    private static GRANTED: string = "granted";
-
     private static DENIED: string = "denied";
+
+    private static GRANTED: string = "granted";
 
     private eventAggregator: EventAggregator;
 
@@ -24,7 +24,7 @@ export class BrowserNotificationManager {
             return Promise.resolve(this.permissionGranted);
         } else {
             return new Promise((resolve , reject) => {
-                Notification.requestPermission(result => {
+                Notification.requestPermission().then(result => {
                     switch (result) {
                         case BrowserNotificationManager.GRANTED:
                         this.permissionGranted = true;
@@ -44,4 +44,46 @@ export class BrowserNotificationManager {
         return notification;
     }
 
+}
+
+export interface NotificationOptions {
+    dir?: string;
+    lang?: string;
+    body?: string;
+    tag?: string;
+    icon?: string;
+    data?: any;
+    vibrate?: number[];
+    renotify?: boolean;
+    silent?: boolean;
+    sound?: string;
+    noscreen?: boolean;
+    sticky?: boolean;
+}
+
+export interface Notification {
+    title: string;
+    dir: string;
+    lang: string;
+    body: string;
+    tag: string;
+    icon: string;
+    data: any;
+    silent: boolean;
+    timestamp: string;
+    noscreen: boolean;
+    renotify: boolean;
+    sound: string;
+    sticky: boolean;
+    vibrate: number[];
+    onclick: Function;
+    onerror: Function;
+    close(): void;
+}
+
+export declare var Notification: {
+    prototype: Notification;
+    permission: string;
+    new(title: string, options?: NotificationOptions): Notification;
+    requestPermission(): Promise<string>;
 }
