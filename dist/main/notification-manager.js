@@ -5,4 +5,3 @@ var NotificationManager = (function () {
     return NotificationManager;
 }());
 exports.NotificationManager = NotificationManager;
-//# sourceMappingURL=notification-manager.js.map
