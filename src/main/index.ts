@@ -1,1 +1,1 @@
-export { NotificationManager} from "./notification-manager";
+export { NotificationManager } from "./notification-manager";
